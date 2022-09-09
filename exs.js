@@ -71,55 +71,70 @@
 
 // Ex 3:
 
-let salario = [1000, 3000, 7000]
-let filhos = [3,2,4]
+// let salario = [1000, 3000, 7000]
+// let filhos = [3,2,4]
 
-console.log("A média salarial é de R$"+CalcularMediaSalario().toFixed(2)+ ".")
-console.log("A média de filhos é de aproximadamente "+CalcularMediaFilhos().toFixed(0)+ " filhos.")
-console.log("O maior salário é de R$" +MostrarMaiorSalario().toFixed(2)+ ".")
-console.log("Aproximadamente " +MostrarPorcentagem().toFixed(0)+ "% da população tem o salário de até R$1500,00.")
+// console.log("A média salarial é de R$"+CalcularMediaSalario().toFixed(2)+ ".")
+// console.log("A média de filhos é de aproximadamente "+CalcularMediaFilhos().toFixed(0)+ " filhos.")
+// console.log("O maior salário é de R$" +MostrarMaiorSalario().toFixed(2)+ ".")
+// console.log("Aproximadamente " +MostrarPorcentagem().toFixed(0)+ "% da população tem o salário de até R$1500,00.")
 
-function MostrarPorcentagem(){
-    let Porcentagem = 0
-    for(let index = 0; index < salario.length; index++){
-        if(salario[index] < 1500){
-            Porcentagem++
-        }
-   }
-    Porcentagem = (Porcentagem / salario.length) * 100
-    return Porcentagem
-}
+// function MostrarPorcentagem(){
+//     let Porcentagem = 0
+//     for(let index = 0; index < salario.length; index++){
+//         if(salario[index] < 1500){
+//             Porcentagem++
+//         }
+//    }
+//     Porcentagem = (Porcentagem / salario.length) * 100
+//     return Porcentagem
+// }
 
-function MostrarMaiorSalario(){
-    let Maior = 0
-    for(let index = 0; index < salario.length; index++){
-        if(salario[index] > Maior){
-            Maior = salario[index]
-        }
-    }
-    return Maior
-}
+// function MostrarMaiorSalario(){
+//     let Maior = 0
+//     for(let index = 0; index < salario.length; index++){
+//         if(salario[index] > Maior){
+//             Maior = salario[index]
+//         }
+//     }
+//     return Maior
+// }
 
-function CalcularMediaFilhos(){
-    let MediaFilhos = 0
-    for(let index = 0; index < filhos.length; index++){
-        MediaFilhos = MediaFilhos + filhos[index]
-    }
-    MediaFilhos = MediaFilhos / filhos.length
-    return MediaFilhos 
-}
+// function CalcularMediaFilhos(){
+//     let MediaFilhos = 0
+//     for(let index = 0; index < filhos.length; index++){
+//         MediaFilhos = MediaFilhos + filhos[index]
+//     }
+//     MediaFilhos = MediaFilhos / filhos.length
+//     return MediaFilhos 
+// }
 
-function CalcularMediaSalario(){
-    let MediaSalario = 0
-    for(let index = 0; index < salario.length; index++){
-        MediaSalario = MediaSalario + salario[index]
-    }
-    MediaSalario = MediaSalario / salario.length
-    return MediaSalario 
-}
+// function CalcularMediaSalario(){
+//     let MediaSalario = 0
+//     for(let index = 0; index < salario.length; index++){
+//         MediaSalario = MediaSalario + salario[index]
+//     }
+//     MediaSalario = MediaSalario / salario.length
+//     return MediaSalario 
+// }
 
-function CorrerArray(){
-    for(let index = 0; index < salario.length; index++){
+// function CorrerArray(){
+//     for(let index = 0; index < salario.length; index++){
 
+//     }
+// }
+
+// Ex 4:
+
+console.log(CalcularMediaNotas(5,6,7,"P"))
+
+function CalcularMediaNotas(Nota1,Nota2,Nota3,TipoParametro){
+    let media = 0
+    if(TipoParametro == "A"){
+        media = (Nota1 + Nota2 + Nota3) / 3
+        return media
+    }else if(TipoParametro == "P"){
+        media = (Nota1 * 0.5) + (Nota2 * 0.3) + (Nota3 * 0.2)
+        return media 
     }
 }
