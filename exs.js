@@ -53,21 +53,73 @@
 
 // Ex 2:
 
+// VerificarNumero(6)
 
+// function VerificarNumero(numeroParametro){
+//     let verificador = parseInt(0)
+//     for(let index = 1; index < numeroParametro; index++){
+//         if(numeroParametro % index == 0){
+//             verificador = verificador + index
+//         }
+//     }
+//     if(verificador == numeroParametro){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
 
-VerificarNumero(6)
+// Ex 3:
 
-function VerificarNumero(numeroParametro){
-    let verificador = parseInt(0)
-    for(let index = 1; index < numeroParametro; index++){
-        if(numeroParametro % index == 0){
-            verificador = verificador + index
+let salario = [1000, 3000, 7000]
+let filhos = [3,2,4]
+
+console.log("A média salarial é de R$"+CalcularMediaSalario().toFixed(2)+ ".")
+console.log("A média de filhos é de aproximadamente "+CalcularMediaFilhos().toFixed(0)+ " filhos.")
+console.log("O maior salário é de R$" +MostrarMaiorSalario().toFixed(2)+ ".")
+console.log("Aproximadamente " +MostrarPorcentagem().toFixed(0)+ "% da população tem o salário de até R$1500,00.")
+
+function MostrarPorcentagem(){
+    let Porcentagem = 0
+    for(let index = 0; index < salario.length; index++){
+        if(salario[index] < 1500){
+            Porcentagem++
         }
-    }
-    if(verificador == numeroParametro){
-        return true
-    }else{
-        return false
-    }
+   }
+    Porcentagem = (Porcentagem / salario.length) * 100
+    return Porcentagem
 }
 
+function MostrarMaiorSalario(){
+    let Maior = 0
+    for(let index = 0; index < salario.length; index++){
+        if(salario[index] > Maior){
+            Maior = salario[index]
+        }
+    }
+    return Maior
+}
+
+function CalcularMediaFilhos(){
+    let MediaFilhos = 0
+    for(let index = 0; index < filhos.length; index++){
+        MediaFilhos = MediaFilhos + filhos[index]
+    }
+    MediaFilhos = MediaFilhos / filhos.length
+    return MediaFilhos 
+}
+
+function CalcularMediaSalario(){
+    let MediaSalario = 0
+    for(let index = 0; index < salario.length; index++){
+        MediaSalario = MediaSalario + salario[index]
+    }
+    MediaSalario = MediaSalario / salario.length
+    return MediaSalario 
+}
+
+function CorrerArray(){
+    for(let index = 0; index < salario.length; index++){
+
+    }
+}
